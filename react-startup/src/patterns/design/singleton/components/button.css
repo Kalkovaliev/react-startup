@@ -1,0 +1,127 @@
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.btn{
+    position: relative;
+    right: 150px;
+    top:50px;
+    width: 120px;
+    height: 35px;
+    margin: 20px;
+}
+
+.btn a{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.264);
+    box-shadow: 0 15px 35px rgba(221, 115, 16, 0.449);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.189);
+    border-radius: 10px;
+    color:coral;
+    z-index: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1.5s;
+    backdrop-filter: blur(15px);
+
+}
+
+
+
+.btn:hover a{
+    letter-spacing: 3px;
+}
+
+.btn a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: linear-gradient(to left,rgba(255, 115, 0, 0.212),#f9f9f9e0, transparent);
+    transform: skewX(-100deg) translate(100);
+    transition: 1.8s;
+
+}
+
+
+.btn:hover a::before{
+    transform: skewX(25deg) translate(250%);
+}
+
+
+ .btn::before{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    transition: 0.8s;
+    transition-delay: 0.4s;
+
+}
+
+.btn:hover::before{
+    bottom: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.4s;
+}
+
+
+
+ .btn::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    transition: 0.8s;
+    transition-delay: 0.4s;
+    filter: blur(25%);
+
+}
+
+ .btn:hover::after{
+    top: 0;
+    height: 50%;
+    width: 80%;
+    border-radius: 30px;
+    transition-delay: 0.4s;
+    opacity: .5;
+}
+
+
+
+ .btn:nth-child(1)::before,
+ .btn:nth-child(1)::after{
+    background:coral;
+    box-shadow: 0 0 5px coral,
+    0 0 15px coral,
+    0 0 30px coral,
+    0 0 60px coral;
+    backdrop-filter: blur(50px);    
+    opacity: .5;
+}
