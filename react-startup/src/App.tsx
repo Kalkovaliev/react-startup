@@ -1,23 +1,28 @@
+import ContainerPresentational from 'patterns/design/container-presentational';
+import Prototype from 'patterns/design/prototype';
+import Dog from 'patterns/design/prototype/components/dog';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Provider from './patterns/design/provider';
+import Proxy from './patterns/design/proxy';
+import { Singleton } from './patterns/design/singleton';
 
 function App() {
+
+
+
   return (
-    <div className="App">
+    <div className="App" id="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <section>Design Patterns</section>
+        <section></section>
+        <section></section>
+        {/* <Singleton /> */}
+
+        {/* <Proxy /> */}
+        {/* <Provider /> */}
+        {/* <Prototype /> */}
+        <ContainerPresentational />
       </header>
     </div>
   );
