@@ -4,7 +4,7 @@ import DogImages from "./components/dogImages";
 const ContainerPresentational = () => {
 
     return (
-        <div data-testid="provider">
+        <div data-testid="container-presentational">
             <h2>Container/Presentational Pattern</h2>
             <p>Enforce separation of concerns by separating the view from the application logic.</p>
             <p>Presentational Components: Components that care about how data is shown to the user. A presentational component receives its data through props. Its primary function is to simply display the data it receives the way we want them to, including styles, without modifying that data.</p>

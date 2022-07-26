@@ -5,10 +5,10 @@ import useDogImages from "./useDogsImages";
 //Presentational components receive their data from container components.
 const DogImages = (): JSX.Element => {
 
-    const dogs = useDogImages();
+    const { data } = useDogImages("https://dog.ceo/api/breed/labrador/images/random/6");
     return (
         <>
-            {dogs.map((dog: string, i: number) => <img src={dog} key={i} alt="Dog" />)}
+            {data.map((dog: string, i: number) => <img data-testid={`dog-${i}`} src={dog} key={i} alt="Dog" />)}
         </>);
 }
 
