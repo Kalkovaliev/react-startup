@@ -7,6 +7,7 @@ module.exports = {
       // Configure the transpilation based on the target browsers
       // https://babeljs.io/docs/en/babel-preset-env
       "@babel/preset-env",
+      '@babel/preset-typescript',
       {
         // Support latest two versions of each browser, IE11.
         targets: {
